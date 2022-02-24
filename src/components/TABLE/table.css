@@ -13,7 +13,7 @@
     text-align: right;
 }
 
-input[type="text"], input[type="date"], select{
+input, .type{
     width: 100px;
     margin: 0px 3px;
     border: 0.5px solid rgb(194, 194, 180);
@@ -27,13 +27,26 @@ input[type="text"], input[type="date"], select{
     background-repeat: no-repeat;
     background-position: 100px;
     background-size: 12px;
-    
+    padding: 5px 10px;
 }
 input[type="date"]{
     padding: 3px 5px;
 }
-select{
+.type{
     padding: 5px;
+}
+.refreshButton{
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(60, 5, 131, 0.801);
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.refreshButton:hover{
+    background-color: rgb(60, 5, 131);
 }
 input:focus, select:focus{
     outline: none;
@@ -55,4 +68,51 @@ tr{
 }
 tr:last-child{
     border-bottom: none;
+}
+.bold{
+    font-weight: bold;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.page-number-section{
+    width: 20%;
+    display: inline-block;
+}
+.page-filter-section{
+    width: 80%;
+    display: inline-block;
+}
+#page-number{
+    width: 30px;
+    padding: 5px 2px;
+}
+.number-of-record{
+    padding: 4px;
+    border: 0.5px solid rgb(194, 194, 180);
+    border-radius: 3px;
+    color: rgb(102, 105, 107);
+    margin: 0px 4px;
+}
+.mt-1{
+    margin-top: 5px;
+}
+.page-filter-section button{
+    background: rgba(60, 5, 131, 0.801);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 0px 3px;
+}
+.page-filter-section button:hover{
+    background-color: rgb(60, 5, 131);
+}
+.page-filter-section label{
+    font-size: 14px;
+    margin-left: 5px;
 }
