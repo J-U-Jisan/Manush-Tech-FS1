@@ -88,13 +88,15 @@ export default function Table(props) {
       'numberOfRecordsPerPage' : e.target.value,
       'numberOfPages' : Math.ceil(totalRecords / e.target.value)
     })
+    setCurrentPage(1)
   }
   
   const handleGoToPage = (e) => {
     const val = e.target.value
-    if(val>=1 && val <= pageFilter.numberOfPages){
-      setCurrentPage(val)
-    }
+    if(val<1) return false
+    else if(val>pageFilter.numberOfPages)
+      return false
+    setCurrentPage(val)
   }
 
   const handlePreviousPage = () => {
